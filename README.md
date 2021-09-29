@@ -1,7 +1,7 @@
 
 # Child-Tuning
 
-Source code for EMNLP 2021 Long paper: [Raise a Child in Large Language Model: Towards Effective and Generalizable Fine-tuning](https://arxiv.org/abs/2105.14924).
+Source code for EMNLP 2021 Long paper: [Raise a Child in Large Language Model: Towards Effective and Generalizable Fine-tuning](https://arxiv.org/pdf/2109.05687.pdf).
 
 ## 1. Environments
 
