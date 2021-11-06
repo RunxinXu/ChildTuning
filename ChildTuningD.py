@@ -57,7 +57,7 @@ class ChildTuningDtrainer(Trainer):
 
         for name, params in model.named_parameters():
             if 'layer' in name:
-                gradient_mask[params] = params.new_zeros(params.size())
+                gradient_mask[name] = params.new_zeros(params.size())
 
         # Now begin
         train_dataloader = DataLoader(
@@ -82,7 +82,7 @@ class ChildTuningDtrainer(Trainer):
             for name, params in model.named_parameters():
                 if 'layer' in name:
                     torch.nn.utils.clip_grad_norm_(params, self.args.max_grad_norm)
-                    gradient_mask[params] += (params.grad ** 2) / N
+                    gradient_mask[name] += (params.grad ** 2) / N
             model.zero_grad()
 
 
